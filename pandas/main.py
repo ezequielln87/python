@@ -1,16 +1,25 @@
-# This is a sample Python script.
+import pandas as pd
+import numpy as np
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+df = pd.DataFrame({
+    "Nome": ["João da Silva",
+             "Carlos Souza",
+             "Maria Ferreira"],
+    "Idade": [22,35,58],
+    "Sexo":["masculino", "masculino", "feminino"]}
+)
 
+print(df)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# estrutura de dados unidimensional
 
+s = pd.Series(np.random.randn(5), index=['a', 'b', 'c', 'd', 'e'])
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print(s)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+#dicionário
+d = {'b': 1, 'a': 0, 'c':2}
+
+pd.Series(d)
+
+print(d)

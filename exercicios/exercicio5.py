@@ -1,8 +1,14 @@
-def calcular_desconto():                    #7
-    if valor <= 100:                        #2
-        valor -= valor * 0.03               #3
-        elif valor <= 500:                  #1
-            valor -= valor * 0.10           #5
-        elif valor <= 1000:                 #4
-            valor -= valor * 0.20           #6
-    return valor                            #8
+import pandas as pd
+
+
+def minha_funcao(valor):
+    for i, c in enumerate(valor):
+        if c.lower() == 'a' or c.lower() == 'e':
+            print('possui', c, i)
+        else:
+            print('nao eh vogal')
+
+
+letra = input("letra")
+resultLetra = minha_funcao(letra)
+print(resultLetra)
